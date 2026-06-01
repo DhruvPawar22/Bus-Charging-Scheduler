@@ -1,0 +1,66 @@
+{
+  "scenario_id": "scenario_3",
+  "scenario_name": "Scenario 3 — Asymmetric Load",
+  "description": "10 buses going Bengaluru→Kochi (15 min spacing), only 4 going Kochi→Bengaluru. Tests how the scheduler handles uneven traffic across directions.",
+
+  "world": {
+    "route": {
+      "nodes": [
+        {"id": "bengaluru", "name": "Bengaluru", "node_type": "terminal"},
+        {"id": "A",         "name": "Station A", "node_type": "charging_station"},
+        {"id": "B",         "name": "Station B", "node_type": "charging_station"},
+        {"id": "C",         "name": "Station C", "node_type": "charging_station"},
+        {"id": "D",         "name": "Station D", "node_type": "charging_station"},
+        {"id": "kochi",     "name": "Kochi",     "node_type": "terminal"}
+      ],
+      "segments": [
+        {"from_node": "bengaluru", "to_node": "A",     "distance_km": 100},
+        {"from_node": "A",         "to_node": "B",     "distance_km": 120},
+        {"from_node": "B",         "to_node": "C",     "distance_km": 100},
+        {"from_node": "C",         "to_node": "D",     "distance_km": 120},
+        {"from_node": "D",         "to_node": "kochi", "distance_km": 100}
+      ]
+    },
+    "physics": {
+      "battery_range_km": 240,
+      "charge_time_minutes": 25,
+      "speed_kmh": 60
+    }
+  },
+
+  "stations": {
+    "A": {"chargers": 1},
+    "B": {"chargers": 1},
+    "C": {"chargers": 1},
+    "D": {"chargers": 1}
+  },
+
+  "operators": {
+    "kpn":      {"name": "KPN"},
+    "freshbus": {"name": "Freshbus"},
+    "flixbus":  {"name": "Flixbus"}
+  },
+
+  "weights": {
+    "individual": 1.0,
+    "operator":   1.0,
+    "overall":    1.0
+  },
+
+  "buses": [
+    {"id": "bus-BK-01", "operator": "kpn",      "origin": "bengaluru", "destination": "kochi",     "departure_time": "19:00"},
+    {"id": "bus-BK-02", "operator": "freshbus", "origin": "bengaluru", "destination": "kochi",     "departure_time": "19:15"},
+    {"id": "bus-BK-03", "operator": "flixbus",  "origin": "bengaluru", "destination": "kochi",     "departure_time": "19:30"},
+    {"id": "bus-BK-04", "operator": "kpn",      "origin": "bengaluru", "destination": "kochi",     "departure_time": "19:45"},
+    {"id": "bus-BK-05", "operator": "freshbus", "origin": "bengaluru", "destination": "kochi",     "departure_time": "20:00"},
+    {"id": "bus-BK-06", "operator": "flixbus",  "origin": "bengaluru", "destination": "kochi",     "departure_time": "20:15"},
+    {"id": "bus-BK-07", "operator": "kpn",      "origin": "bengaluru", "destination": "kochi",     "departure_time": "20:30"},
+    {"id": "bus-BK-08", "operator": "freshbus", "origin": "bengaluru", "destination": "kochi",     "departure_time": "20:45"},
+    {"id": "bus-BK-09", "operator": "flixbus",  "origin": "bengaluru", "destination": "kochi",     "departure_time": "21:00"},
+    {"id": "bus-BK-10", "operator": "kpn",      "origin": "bengaluru", "destination": "kochi",     "departure_time": "21:15"},
+    {"id": "bus-KB-01", "operator": "freshbus", "origin": "kochi",     "destination": "bengaluru", "departure_time": "19:00"},
+    {"id": "bus-KB-02", "operator": "flixbus",  "origin": "kochi",     "destination": "bengaluru", "departure_time": "19:35"},
+    {"id": "bus-KB-03", "operator": "kpn",      "origin": "kochi",     "destination": "bengaluru", "departure_time": "20:10"},
+    {"id": "bus-KB-04", "operator": "freshbus", "origin": "kochi",     "destination": "bengaluru", "departure_time": "20:45"}
+  ]
+}
