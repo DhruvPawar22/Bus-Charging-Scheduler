@@ -1,7 +1,7 @@
 # Bus Charging Scheduler
 
 A Python + Streamlit app that schedules electric bus charging along the Bengaluru–Kochi route. The scheduler decides which stations each bus charges at and resolves contention when multiple buses compete for the same charger — using a pluggable, weight-driven priority system.
-
+https://bus-charging-scheduler-dhruv.streamlit.app/
 ---
 
 ## Running Locally
