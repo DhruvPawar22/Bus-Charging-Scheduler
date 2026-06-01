@@ -1,0 +1,1230 @@
+{
+  "table_of_contents": [
+    {
+      "title": "Take-Home Assignment: Bus Charging Scheduler",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          71.298828125,
+          94.5411376953125
+        ],
+        [
+          514.2644653320312,
+          94.5411376953125
+        ],
+        [
+          514.2644653320312,
+          114.5411376953125
+        ],
+        [
+          71.298828125,
+          114.5411376953125
+        ]
+      ]
+    },
+    {
+      "title": "Stack and hosting",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          71.298828125,
+          202.66571044921875
+        ],
+        [
+          202.12939453125,
+          201.8662109375
+        ],
+        [
+          202.12939453125,
+          218.66571044921875
+        ],
+        [
+          71.298828125,
+          219.1337890625
+        ]
+      ]
+    },
+    {
+      "title": "The problem",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          71.298828125,
+          409.8994140625
+        ],
+        [
+          166.24423217773438,
+          408.2548828125
+        ],
+        [
+          166.24423217773438,
+          425.969970703125
+        ],
+        [
+          71.298828125,
+          425.969970703125
+        ]
+      ]
+    },
+    {
+      "title": "The rules",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          71.880859375,
+          74.03289794921875
+        ],
+        [
+          141.3477020263672,
+          73.181640625
+        ],
+        [
+          141.3477020263672,
+          90.03289794921875
+        ],
+        [
+          70.716796875,
+          90.03289794921875
+        ]
+      ]
+    },
+    {
+      "title": "Physical constants",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          71.880859375,
+          110.93701171875
+        ],
+        [
+          190.2168731689453,
+          109.7724609375
+        ],
+        [
+          190.2168731689453,
+          124.93701171875
+        ],
+        [
+          70.716796875,
+          124.93701171875
+        ]
+      ]
+    },
+    {
+      "title": "The route",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          71.298828125,
+          193.0892333984375
+        ],
+        [
+          134.4872589111328,
+          192.41015625
+        ],
+        [
+          134.4872589111328,
+          207.0892333984375
+        ],
+        [
+          71.298828125,
+          207.0892333984375
+        ]
+      ]
+    },
+    {
+      "title": "Buses",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          71.58984375,
+          456.5652770996094
+        ],
+        [
+          113.2256851196289,
+          455.53515625
+        ],
+        [
+          113.2256851196289,
+          470.5652770996094
+        ],
+        [
+          71.58984375,
+          470.5652770996094
+        ]
+      ]
+    },
+    {
+      "title": "Charging plans",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          71.0078125,
+          553.2638244628906
+        ],
+        [
+          168.45655822753906,
+          551.740234375
+        ],
+        [
+          168.45655822753906,
+          567.2638244628906
+        ],
+        [
+          71.0078125,
+          568.185546875
+        ]
+      ]
+    },
+    {
+      "title": "Hard rules that must always hold",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          71.880859375,
+          73.77880859375
+        ],
+        [
+          277.5724182128906,
+          73.77880859375
+        ],
+        [
+          277.5724182128906,
+          87.77880859375
+        ],
+        [
+          71.880859375,
+          87.77880859375
+        ]
+      ]
+    },
+    {
+      "title": "What to optimize for",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          71.298828125,
+          216.255859375
+        ],
+        [
+          216.01597595214844,
+          214.611328125
+        ],
+        [
+          216.01597595214844,
+          232.37005615234375
+        ],
+        [
+          71.298828125,
+          232.701171875
+        ]
+      ]
+    },
+    {
+      "title": "The one thing we really care about",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          71.880859375,
+          421.53729248046875
+        ],
+        [
+          318.88970947265625,
+          421.0
+        ],
+        [
+          318.88970947265625,
+          437.53729248046875
+        ],
+        [
+          70.716796875,
+          439.08984375
+        ]
+      ]
+    },
+    {
+      "title": "Designing your data structure (important)",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          72.0,
+          74.00390625
+        ],
+        [
+          364.5032043457031,
+          74.00390625
+        ],
+        [
+          364.5032043457031,
+          90.03289794921875
+        ],
+        [
+          72.0,
+          90.03289794921875
+        ]
+      ]
+    },
+    {
+      "title": "The 5 scenarios",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          71.298828125,
+          666.03515625
+        ],
+        [
+          188.4768524169922,
+          664.390625
+        ],
+        [
+          188.4768524169922,
+          682.8236694335938
+        ],
+        [
+          71.298828125,
+          682.8236694335938
+        ]
+      ]
+    },
+    {
+      "title": "Scenario 1 \u2014 Even spacing",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          71.58984375,
+          193.73974609375
+        ],
+        [
+          247.26510620117188,
+          193.73974609375
+        ],
+        [
+          247.26510620117188,
+          207.73974609375
+        ],
+        [
+          71.58984375,
+          207.73974609375
+        ]
+      ]
+    },
+    {
+      "title": "Scenario 2 \u2014 Bunched start",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          72.0,
+          141.4296875
+        ],
+        [
+          248.28118896484375,
+          141.4296875
+        ],
+        [
+          248.28118896484375,
+          156.12158203125
+        ],
+        [
+          71.0078125,
+          156.12158203125
+        ]
+      ]
+    },
+    {
+      "title": "Scenario 3 \u2014 Asymmetric load",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          71.298828125,
+          73.77880859375
+        ],
+        [
+          266.6683349609375,
+          73.77880859375
+        ],
+        [
+          266.6683349609375,
+          87.77880859375
+        ],
+        [
+          71.298828125,
+          87.77880859375
+        ]
+      ]
+    },
+    {
+      "title": "Scenario 4 \u2014 Operator-heavy",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          71.298828125,
+          542.2841796875
+        ],
+        [
+          260.21197509765625,
+          540.6396484375
+        ],
+        [
+          260.21197509765625,
+          557.6249084472656
+        ],
+        [
+          71.298828125,
+          557.9072265625
+        ]
+      ]
+    },
+    {
+      "title": "Weights for this scenario: individual = 1.0, operator = 2.0, overall = 1.0",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          71.58984375,
+          609.7099609375
+        ],
+        [
+          507.89569091796875,
+          608.0654296875
+        ],
+        [
+          507.89569091796875,
+          621.7800903320312
+        ],
+        [
+          71.58984375,
+          621.7800903320312
+        ]
+      ]
+    },
+    {
+      "title": "Scenario 5 \u2014 Worst case convergence",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          72.0,
+          527.4833984375
+        ],
+        [
+          316.98681640625,
+          527.4833984375
+        ],
+        [
+          316.98681640625,
+          543.1064453125
+        ],
+        [
+          71.0078125,
+          543.1064453125
+        ]
+      ]
+    },
+    {
+      "title": "What to build",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          70.42578125,
+          534.0615234375
+        ],
+        [
+          168.3251495361328,
+          532.4169921875
+        ],
+        [
+          168.3251495361328,
+          550.6159057617188
+        ],
+        [
+          70.42578125,
+          550.6159057617188
+        ]
+      ]
+    },
+    {
+      "title": "The scheduler",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          71.58984375,
+          592.0664520263672
+        ],
+        [
+          162.22378540039062,
+          591.208984375
+        ],
+        [
+          162.22378540039062,
+          606.0664520263672
+        ],
+        [
+          71.58984375,
+          606.0664520263672
+        ]
+      ]
+    },
+    {
+      "title": "The UI",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          71.880859375,
+          717.837890625
+        ],
+        [
+          115.27342224121094,
+          717.837890625
+        ],
+        [
+          115.27342224121094,
+          731.8569183349609
+        ],
+        [
+          71.880859375,
+          731.8569183349609
+        ]
+      ]
+    },
+    {
+      "title": "How we'll test your submission",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          71.880859375,
+          251.2021484375
+        ],
+        [
+          292.263671875,
+          251.2021484375
+        ],
+        [
+          292.263671875,
+          268.04217529296875
+        ],
+        [
+          71.880859375,
+          268.04217529296875
+        ]
+      ]
+    },
+    {
+      "title": "Making your own calls",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          71.880859375,
+          485.958984375
+        ],
+        [
+          232.02871704101562,
+          484.314453125
+        ],
+        [
+          232.02871704101562,
+          502.30145263671875
+        ],
+        [
+          71.880859375,
+          502.404296875
+        ]
+      ]
+    },
+    {
+      "title": "Deliverables",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          71.880859375,
+          662.3756103515625
+        ],
+        [
+          162.68624877929688,
+          661.5126953125
+        ],
+        [
+          162.68624877929688,
+          678.3756103515625
+        ],
+        [
+          71.880859375,
+          678.3756103515625
+        ]
+      ]
+    },
+    {
+      "title": "1. Hosted link",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          72.0,
+          699.2797698974609
+        ],
+        [
+          159.11021423339844,
+          698.5146484375
+        ],
+        [
+          159.11021423339844,
+          713.2797698974609
+        ],
+        [
+          72.0,
+          713.2797698974609
+        ]
+      ]
+    },
+    {
+      "title": "2. GitHub repo (must be public)",
+      "heading_level": null,
+      "page_id": 10,
+      "polygon": [
+        [
+          70.716796875,
+          73.77880859375
+        ],
+        [
+          267.97821044921875,
+          73.77880859375
+        ],
+        [
+          267.97821044921875,
+          87.77880859375
+        ],
+        [
+          70.716796875,
+          87.77880859375
+        ]
+      ]
+    },
+    {
+      "title": "Tips",
+      "heading_level": null,
+      "page_id": 10,
+      "polygon": [
+        [
+          72.0,
+          318.19403076171875
+        ],
+        [
+          104.29405975341797,
+          317.8056640625
+        ],
+        [
+          104.29405975341797,
+          334.19403076171875
+        ],
+        [
+          72.0,
+          335.0732421875
+        ]
+      ]
+    },
+    {
+      "title": "How we'll evaluate",
+      "heading_level": null,
+      "page_id": 10,
+      "polygon": [
+        [
+          71.298828125,
+          450.6296081542969
+        ],
+        [
+          206.94073486328125,
+          449.3681640625
+        ],
+        [
+          206.94073486328125,
+          466.6296081542969
+        ],
+        [
+          71.298828125,
+          466.6296081542969
+        ]
+      ]
+    },
+    {
+      "title": "Submission",
+      "heading_level": null,
+      "page_id": 11,
+      "polygon": [
+        [
+          71.298828125,
+          268.69891357421875
+        ],
+        [
+          157.6480255126953,
+          267.6474609375
+        ],
+        [
+          157.6480255126953,
+          284.69891357421875
+        ],
+        [
+          71.298828125,
+          284.69891357421875
+        ]
+      ]
+    },
+    {
+      "title": "What happens next",
+      "heading_level": null,
+      "page_id": 11,
+      "polygon": [
+        [
+          70.716796875,
+          532.0514526367188
+        ],
+        [
+          211.2987060546875,
+          530.7724609375
+        ],
+        [
+          211.2987060546875,
+          548.0514526367188
+        ],
+        [
+          70.716796875,
+          548.0514526367188
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          587
+        ],
+        [
+          "Line",
+          26
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          457
+        ],
+        [
+          "Line",
+          29
+        ],
+        [
+          "TableCell",
+          14
+        ],
+        [
+          "ListItem",
+          6
+        ],
+        [
+          "SectionHeader",
+          5
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "Table",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          582
+        ],
+        [
+          "Line",
+          29
+        ],
+        [
+          "ListItem",
+          10
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "ListGroup",
+          3
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          777
+        ],
+        [
+          "Line",
+          33
+        ],
+        [
+          "Text",
+          11
+        ],
+        [
+          "SectionHeader",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          303
+        ],
+        [
+          "TableCell",
+          80
+        ],
+        [
+          "Line",
+          29
+        ],
+        [
+          "ListItem",
+          5
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Text",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          245
+        ],
+        [
+          "TableCell",
+          92
+        ],
+        [
+          "Line",
+          26
+        ],
+        [
+          "Table",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Text",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          295
+        ],
+        [
+          "TableCell",
+          80
+        ],
+        [
+          "Line",
+          27
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "Table",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 7,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          255
+        ],
+        [
+          "TableCell",
+          92
+        ],
+        [
+          "Line",
+          26
+        ],
+        [
+          "Table",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Text",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 8,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          293
+        ],
+        [
+          "TableCell",
+          64
+        ],
+        [
+          "Line",
+          27
+        ],
+        [
+          "ListItem",
+          4
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 9,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          561
+        ],
+        [
+          "Line",
+          29
+        ],
+        [
+          "ListItem",
+          9
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "ListGroup",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 10,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          537
+        ],
+        [
+          "Line",
+          35
+        ],
+        [
+          "ListItem",
+          13
+        ],
+        [
+          "TableCell",
+          10
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "Table",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 11,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          478
+        ],
+        [
+          "Line",
+          30
+        ],
+        [
+          "ListItem",
+          9
+        ],
+        [
+          "TableCell",
+          8
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "Table",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 12,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          39
+        ],
+        [
+          "Line",
+          2
+        ],
+        [
+          "Text",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data\\SDE_assesment_-_May_2026"
+}
